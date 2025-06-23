@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin responsive-font($mobile, $tablet, $desktop) {
+  font-size: $mobile;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: $tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: $desktop;
+  }
+}

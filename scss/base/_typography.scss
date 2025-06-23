@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'mixins';
+
+.logo {
+  font-family: $font-montserrat;
+  font-weight: $font-bold;
+  @include responsive-font($font-xl, $font-2xl, $font-3xl);
+}
+
+//logo
+h1 {
+  font-family: $font-poppins;
+  font-weight: $font-bold;
+  @include responsive-font($font-xl, $font-2xl, $font-3xl);
+  line-height: 1.2;
+}
+
+//section
+h2 {
+  font-family: $font-montserrat;
+  font-weight: $font-semibold;
+  @include responsive-font($font-lg, $font-xl, $font-2xl);
+  line-height: 1.3;
+}
+
+
+//player song tiiile, card
+h3 {
+  font-family: $font-inter;
+  font-weight: $font-medium;
+  @include responsive-font($font-base, $font-lg, $font-xl);
+}
+
+//player artist name, artist name
+h4 {
+  font-family: $font-inter;
+  font-weight: $font-regular;
+  @include responsive-font($font-sm, $font-base, $font-md);
+
+}
+
+//dsecription,lyric, credits
+p {
+  font-family: $font-inter;
+  font-weight: $font-light;
+  @include responsive-font($font-sm, $font-base, $font-md);
+  line-height: 1.5;
+
+}
+
+//time stamp
+small {
+  @include responsive-font($font-xs, $font-sm, $font-base);
+  font-weight: $font-light;
+}
+
+button{
+  font-family: $font-inter;
+  font-weight: $font-medium;
+  @include responsive-font($font-sm, $font-base, $font-base);
+}

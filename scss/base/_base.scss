@@ -1,0 +1,21 @@
+@use 'variables';
+@use 'mixins';
+
+body {
+  font-family: $font-inter;
+  font-size: $font-base;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $bg-gradient-dark;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+#main{
+ height: 100vh;
+  width: 100vw;
+}
