@@ -8,14 +8,28 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: $bg-gradient-dark;
+  min-height: 100vh;
+  background:$bg-gradient-dark;
   color: #fff;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
+#main {
+  padding: $body-padding-mobile;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding: $body-padding-tablet;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: $body-padding-desktop;
+  }
+}
+
+
 #main{
- height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }

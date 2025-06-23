@@ -17,7 +17,8 @@ $font-xl: 1.5rem;
 $font-2xl: 1.875rem;
 $font-3xl: 2.25rem;
 
-$bg-gradient-dark: linear-gradient(to bottom, #030303, #18181C);
+$bg-gradient-dark: linear-gradient(to bottom, rgba(3, 3, 3, 1), rgba(24, 24, 28, 1));
+;
 $bg-gradient-light: linear-gradient(to bottom, #FFFFFF, #F2F4F5);
 
 $color-primary : #18181C;
@@ -32,3 +33,7 @@ $color-white-sec:#E8ECEF;
 $breakpoint-mobile: 640px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+
+$body-padding-mobile: 1rem;
+$body-padding-tablet: 1.5rem;
+$body-padding-desktop: 2rem;
