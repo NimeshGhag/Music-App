@@ -4,6 +4,7 @@ main {
   margin-top: 4.5rem;
   display: grid;
   gap: 1rem;
+
   .hero {
     position: relative;
     width: 100%;
@@ -22,20 +23,21 @@ main {
     display: grid;
     gap: 0.5rem;
     margin-top: 1.2rem;
-  
+
 
 
     .song-info {
       display: grid;
       gap: 0.2rem;
       padding-left: 0.5rem;
-      
+
       .action {
         margin-top: 0.2rem;
         margin-bottom: 1.2rem;
         display: flex;
         gap: 0.5rem;
         align-items: center;
+
         .btn {
           background-color: $color-hero;
           width: fit-content;
@@ -58,7 +60,7 @@ main {
     }
   }
 
-  .dots{
+  .dots {
     width: 20px;
     height: 100%;
     z-index: 2;
@@ -68,14 +70,15 @@ main {
     place-content: center;
     align-items: center;
     gap: 1rem;
-    .dot{
+
+    .dot {
       background-color: #fff;
       width: .3rem;
       height: .3rem;
       border-radius: 50%;
 
-      &:first-child{
-       opacity: .5;
+      &:first-child {
+        opacity: .5;
       }
     }
   }
