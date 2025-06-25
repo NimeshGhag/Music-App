@@ -26,8 +26,8 @@ h2 {
 
 //player song tiiile, card
 h3 {
-  font-family: $font-inter;
-  font-weight: $font-medium;
+  font-family: $font-poppins;
+  font-weight: $font-regular;
   @include responsive-font($font-base, $font-lg, $font-xl);
 }
 
@@ -51,11 +51,11 @@ p {
 //time stamp
 small {
   @include responsive-font($font-xs, $font-sm, $font-base);
-  font-weight: $font-light;
+  font-weight: $font-regular;
 }
 
 button{
   font-family: $font-inter;
-  font-weight: $font-medium;
-  @include responsive-font($font-sm, $font-base, $font-base);
+  font-weight: $font-regular;
+  @include responsive-font($font-xs, $font-sm, $font-base);
 }

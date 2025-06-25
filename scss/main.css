@@ -43,7 +43,7 @@
 @font-face {
   font-family: "Poppins";
   src: url("/assets/fonts/poppins/Poppins-Bold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -58,13 +58,13 @@
 @font-face {
   font-family: "Montserrat";
   src: url("/assets/fonts/montserrat/Montserrat-Bold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 .logo {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {
@@ -80,7 +80,7 @@
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.5rem;
   line-height: 1.2;
 }
@@ -113,8 +113,8 @@ h2 {
 }
 
 h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
@@ -163,7 +163,7 @@ p {
 
 small {
   font-size: 0.75rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   small {
@@ -178,12 +178,12 @@ small {
 
 button {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 @media (min-width: 768px) {
   button {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1024px) {
@@ -202,34 +202,30 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom, rgb(3, 3, 3), rgb(24, 24, 28));
   color: #fff;
+  height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
-#main {
+body {
   padding: 1rem;
 }
 @media (min-width: 768px) {
-  #main {
+  body {
     padding: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
-  #main {
+  body {
     padding: 2rem;
   }
-}
-
-#main {
-  overflow: hidden;
-  position: relative;
 }
 
 header {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  padding: 1.2rem 1rem 0.85rem 1rem;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   gap: 1rem;
@@ -263,5 +259,83 @@ header .all button {
   transition: all ease-in-out 0.3s;
 }
 header .all .music {
-  background-color: #5772FF;
+  background-color: #5773FB;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  margin-top: 4.5rem;
+  display: grid;
+  gap: 1rem;
+}
+main .hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: url(/assets/images/artists/Ed_Sheeran_750x400-removebg-preview.png);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+main .hero-con {
+  width: 100%;
+  padding: 2rem auto;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+main .hero-con .song-info {
+  display: grid;
+  gap: 0.2rem;
+  padding-left: 0.5rem;
+}
+main .hero-con .song-info .action {
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+main .hero-con .song-info .action .btn {
+  background-color: #5773FB;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+main .hero-con .song-info .action .btn-heart {
+  border: 1px solid #fff;
+  color: #5773FB;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.3rem 0.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+main .dots {
+  width: 20px;
+  height: 100%;
+  z-index: 2;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  place-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+main .dots .dot {
+  background-color: #fff;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+}
+main .dots .dot:first-child {
+  opacity: 0.5;
 }

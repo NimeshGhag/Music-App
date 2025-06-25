@@ -11,12 +11,13 @@ body {
   min-height: 100vh;
   background:$bg-gradient-dark;
   color: #fff;
+  height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
+
 }
 
-#main {
+body {
   padding: $body-padding-mobile;
 
   @media (min-width: $breakpoint-tablet) {
@@ -29,7 +30,4 @@ body {
 }
 
 
-#main{
-  overflow: hidden;
-  position: relative;
-}
+
