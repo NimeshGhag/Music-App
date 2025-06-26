@@ -382,6 +382,84 @@ main .hero .dots .dot {
 main .hero .dots .dot:first-child {
   opacity: 0.5;
 }
+main .view-1 {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  background-color: #211F27;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+}
+main .view-1 .tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .view-1 .tags p {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+main .view-1 .tags p:hover {
+  color: #5773FB;
+}
+main .view-1 .scroll-con {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 26%;
+  padding: 0 0.5rem 1rem;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  text-transform: capitalize;
+}
+main .view-1 .scroll-con .artist {
+  display: grid;
+  grid-template-rows: min-content;
+  border-radius: 0.3rem;
+  gap: 0.5rem;
+  place-items: center;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .view-1 .scroll-con .artist:hover {
+  background-color: #18181C;
+  transform: scale(1.1);
+}
+main .view-1 .scroll-con .artist .artist-img {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+main .view-1 .scroll-con .artist .artist-img img {
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.8rem;
+}
+main .view-1 .snaps-inline {
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+main .view-1 .snaps-inline::-webkit-scrollbar {
+  display: none;
+}
+main .view-1 .snaps-inline.dragging {
+  cursor: grabbing;
+}
+main .view-1 .snaps-inline > * {
+  scroll-snap-align: start;
+}
 main .view-2 {
   display: flex;
   flex-direction: column;
