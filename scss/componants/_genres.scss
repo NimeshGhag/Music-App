@@ -1,0 +1,13 @@
+@use '../base/genres-colors';
+
+
+
+@each $name, $data in $genre-areas {
+  .genre-#{$name} {
+    grid-area: map-get($data, area);
+    background-color: map-get($data, color);
+    padding: 1rem;
+    border-radius: .4rem;
+  }
+}
+
