@@ -60,3 +60,10 @@ button{
   @include responsive-font($font-xs, $font-sm, $font-base);
   cursor: pointer;
 }
+
+.mini-player-button{
+    font-family: $font-inter;
+  font-weight: $font-regular;
+  @include responsive-font($font-xl, $font-2xl, $font-3xl);
+  cursor: pointer;
+}

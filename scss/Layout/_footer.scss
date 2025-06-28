@@ -1,1 +1,34 @@
+footer {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom:0;
+  display: grid;
 
+   -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  nav {
+    padding: 0rem 1rem .3rem 1rem;
+    position: relative;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: grid;
+        place-items: center;
+        font-size: $font-xs;
+        cursor: pointer;
+
+        i {
+          font-size: $font-xl;
+          font-weight: $font-light;
+        }
+      }
+    }
+
+  }
+}
