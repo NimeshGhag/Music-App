@@ -1,0 +1,128 @@
+body {
+    padding: 0;
+
+    .player-controls {
+        background-color: $color-hero;
+        width: 100%;
+        padding: $body-padding-mobile;
+        aspect-ratio: 2.1/1.15;
+        display: grid;
+        place-items: center;
+
+        .player-control {
+            width: 100%;
+            padding: $body-padding-mobile;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                font-family: $font-inter;
+                font-weight: $font-regular;
+                @include responsive-font($font-xl, $font-3xl, $font-3xl);
+
+                &:nth-child(3) {
+                    background: $color-white;
+                    color: $color-hero;
+                    padding: .5rem 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1rem;
+                }
+            }
+
+        }
+
+        .more-control{
+            display: flex;
+        }
+    }
+}
+
+.player {
+    display: grid;
+    place-content: center;
+    position: relative;
+    gap: 2rem;
+    text-transform: capitalize;
+    padding: $body-padding-mobile;
+    margin-bottom: 1.5rem;
+
+
+
+    .player-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+
+        .options-btn {
+            @include responsive-font($font-xl, $font-2xl, $font-3xl);
+        }
+    }
+
+    .player-image {
+        padding: 1rem 2rem;
+
+        img {
+            width: 100%;
+            border-radius: .5rem;
+
+        }
+    }
+
+    .player-info {
+        display: grid;
+        place-items: center;
+        gap: .5rem;
+    }
+
+    .player-timeline {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        padding: 0 2rem;
+        transition: all 0.3s ease;
+
+
+        input[type=range] {
+            appearance: none;
+            width: 100%;
+            height: 1.5px;
+            background: linear-gradient(to right,
+                    $color-white 0%,
+                    $color-white var(--progress, 30%),
+                    #646464 var(--progress, 40%),
+                    #646464 100%);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 8px;
+                height: 8px;
+                background: black;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                margin-top: -4px;
+                transition: background 0.3s ease;
+            }
+
+            &::-moz-range-thumb {
+                width: 8px;
+                height: 8px;
+                background: black;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+}

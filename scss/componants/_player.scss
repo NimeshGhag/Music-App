@@ -1,7 +1,8 @@
 footer {
-      text-transform: capitalize;
+    text-transform: capitalize;
+
     .mini-player {
-        background-color:tomato;
+        background-color: tomato;
         padding: .15rem .8rem .45rem .8rem;
         width: 100%;
         position: relative;
@@ -18,27 +19,30 @@ footer {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+
                 img {
                     width: 3rem;
                     aspect-ratio: 1/1;
                     border-radius: .3rem;
                     object-fit: cover;
                 }
-                .track-name{
+
+                .track-name {
                     display: grid;
-                    small{
+
+                    small {
                         opacity: .8;
                     }
                 }
             }
-            
-            .track-action{
+
+            .track-action {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 gap: .5rem;
-                
-               
+
+
             }
 
         }
@@ -51,7 +55,8 @@ footer {
             bottom: 0;
             right: 0;
             left: 0;
-            .progress{
+
+            .progress {
                 width: 50%;
                 height: 100%;
                 background-color: $color-hero;
@@ -59,3 +64,4 @@ footer {
         }
     }
 }
+
