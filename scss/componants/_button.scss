@@ -1,0 +1,11 @@
+// player button s
+
+.player-control,
+.more-controls,
+.player-header {
+    button {
+        font-family: $font-inter;
+        font-weight: $font-regular;
+        @include responsive-font($font-xl, $font-2xl, $font-3xl);
+    }
+}
