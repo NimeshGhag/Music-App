@@ -1,0 +1,187 @@
+.playlist-header {
+    padding: $body-padding-mobile;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $body-padding-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $body-padding-desktop;
+    }
+    
+
+    display: grid;
+    place-items: start;
+    gap: 1rem;
+    width: 100%;
+    // background: linear-gradient(to bottom, #ff65c7fb, #000000);
+    @include linear-glass;
+    position: relative;
+    text-transform: capitalize;
+    // border-bottom: 1px solid #fff;
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+
+
+    .header-top {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: .5rem;
+        width: 100%;
+
+
+        button {
+            @include responsive-font($font-xl, $font-2xl, $font-3xl);
+
+        }
+
+
+
+
+        .search-sort-wrapper {
+            display: flex;
+            align-items: center;
+            border-radius: .5rem;
+            width: 100%;
+            padding: 1rem 0;
+
+
+            i {
+                @include glass;
+                padding: .2rem .3rem .2rem .5rem;
+            }
+
+            form {
+                display: flex;
+                gap: 1rem;
+
+                input {
+                    border: none;
+                    @include glass;
+                    padding: .2rem .2rem .2rem .5rem;
+
+                    &:focus {
+                        outline: none;
+
+                    }
+                }
+
+                button {
+                    @include glass;
+                    font-size: inherit;
+                    padding: .2rem 1rem;
+                    border-radius: .2rem;
+                    transition: all .3s ease;
+
+                    &:active {
+                        transform: scale(.9);
+                        background: rgba(255, 255, 255, 0);
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .heade-bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 1rem;
+
+
+        .header-bottom_left {
+            position: relative;
+            display: grid;
+            place-items: start;
+            gap: .8rem;
+
+
+            .download-btn {
+                // @include glass;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                padding: .3rem .5rem;
+                transition: all 0.3s ease;
+            }
+        }
+
+        .play-all-btn {
+            background-color: $color-hero;
+            padding: .1rem .5rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            right: 0;
+            bottom: -17%;
+
+        }
+    }
+
+}
+
+main {
+    display: grid;
+    margin-top: 2rem;
+    padding: $body-padding-mobile;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding: $body-padding-tablet;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: $body-padding-desktop;
+    }
+
+    .song-list {
+        display: grid;
+        gap: .5rem;
+        margin-bottom: 3rem;
+
+        .song-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.2rem 0;
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+
+            .song {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: .5rem;
+
+                img {
+                    width: 3rem;
+                    aspect-ratio: 1/1;
+                    border-radius: .8rem;
+                    object-fit: cover;
+                }
+
+                .song-info {
+                    display: grid;
+
+                    small {
+                        opacity: .6;
+                    }
+                }
+            }
+
+            &:hover{
+                background-color: $color-secondry;
+                cursor: pointer;
+            }
+
+        }
+    }
+}

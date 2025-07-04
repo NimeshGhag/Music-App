@@ -11,3 +11,15 @@
     font-size: $desktop;
   }
 }
+
+@mixin glass {
+  background: rgba(255, 255, 255, 0.076);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@mixin linear-glass {
+  background: linear-gradient(to bottom, #ff65c7fb,rgba(0, 0, 0, 0.4));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
