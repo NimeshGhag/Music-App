@@ -496,6 +496,126 @@ body .player-controls .more-controls .share {
   cursor: pointer;
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(90%, 300px);
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 15px rgba(87, 115, 251, 0.2);
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.076);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.sidebar.sidebar--visible {
+  transform: translateX(0);
+}
+.sidebar .sidebar-content {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+.sidebar .sidebar-content .profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #7a7a7a;
+  padding: 0.6rem;
+}
+.sidebar .sidebar-content .profile-content .profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.sidebar .sidebar-content .profile-content .profile .profile-img {
+  width: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.sidebar .sidebar-content .profile-content .profile .profile-img img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidebar .sidebar-content .profile-content .profile .user-info {
+  display: grid;
+}
+.sidebar .sidebar-content .profile-content .profile .user-info small {
+  opacity: 0.8;
+}
+.sidebar .sidebar-content .profile-content i {
+  color: #5773FB;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .sidebar .sidebar-content .profile-content i {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar .sidebar-content .profile-content i {
+    font-size: 1.875rem;
+  }
+}
+.sidebar .sidebar-content ul {
+  display: grid;
+  gap: 1rem;
+  padding: 0.1rem 0.6rem 0 0.6rem;
+  width: 100%;
+}
+.sidebar .sidebar-content ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.sidebar .sidebar-content ul li:hover {
+  color: #5773FB;
+}
+.sidebar .sidebar-content .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem;
+  border-top: 1px solid #7a7a7a;
+  border-bottom: 1px solid #7a7a7a;
+}
+.sidebar .sidebar-content .toggle .toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.sidebar .sidebar-content .toggle .toggle-btn button {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .sidebar .sidebar-content .toggle .toggle-btn button {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar .sidebar-content .toggle .toggle-btn button {
+    font-size: 1.875rem;
+  }
+}
+.sidebar .sidebar-content .toggle .toggle-btn button:nth-child(1) {
+  color: #5773FB;
+}
+
 footer {
   z-index: 10;
   position: fixed;
@@ -549,6 +669,8 @@ header .profile img {
   width: 100%;
   overflow: hidden;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .all {
   display: flex;

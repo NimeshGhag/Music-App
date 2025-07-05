@@ -19,7 +19,14 @@
 }
 
 @mixin linear-glass {
-  background: linear-gradient(to bottom, #ff65c7fb,rgba(0, 0, 0, 0.4));
+  background: linear-gradient(to bottom, #ff65c7fb, rgba(0, 0, 0, 0.4));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+}
+
+@mixin profile-img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  object-fit: cover;
 }

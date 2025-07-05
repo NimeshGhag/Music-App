@@ -61,7 +61,7 @@ button{
   cursor: pointer;
 }
 
-.mini-player-button ,.play-all-btn, .dot-btn{
+.mini-player-button ,.play-all-btn, .dot-btn {
     font-family: $font-inter;
   font-weight: $font-regular;
   @include responsive-font($font-xl, $font-2xl, $font-3xl);
