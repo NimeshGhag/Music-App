@@ -1,3 +1,11 @@
+@keyframes gredint-slide {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/inter/Inter_18pt-Light.woff2") format("woff2");
@@ -61,6 +69,14 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+}
+@keyframes gredint-slide {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
 }
 .logo {
   font-family: "Montserrat", sans-serif;
@@ -210,6 +226,14 @@ button {
   }
 }
 
+@keyframes gredint-slide {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
 body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
@@ -503,6 +527,7 @@ body .player-controls .more-controls .share {
   height: 100vh;
   width: min(90%, 300px);
   z-index: 100;
+  transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   box-shadow: 2px 0 15px rgba(87, 115, 251, 0.2);
   text-transform: capitalize;
@@ -644,6 +669,15 @@ footer nav ul li {
 footer nav ul li i {
   font-size: 1.5rem;
   font-weight: 300;
+}
+footer nav ul li:nth-child(4) i {
+  background: linear-gradient(90deg, #5773FB, #18181C, #5773FB);
+  background-size: 300% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gredint-slide 4.5s linear infinite;
 }
 
 header {

@@ -30,3 +30,28 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+//animation
+@keyframes gredint-slide {
+  0% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+@mixin animation($c1,$c2) {
+  background: linear-gradient(90deg,
+      $c1 ,
+      $c2,
+      $c1,
+    );
+  background-size: 300% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gredint-slide 4.5s linear infinite;
+}
