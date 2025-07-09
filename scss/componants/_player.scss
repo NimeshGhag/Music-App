@@ -65,3 +65,10 @@ footer {
     }
 }
 
+@media (min-width:$breakpoint-tablet) {
+  footer {
+    .mini-player{
+      padding: .35rem 1rem .45rem 1rem;
+    }
+  }
+}

@@ -9,25 +9,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
-  background:$bg-gradient-dark;
+  background: $bg-gradient-dark;
   color: #fff;
   height: 100%;
   width: 100%;
   position: relative;
-
 }
-
-body {
-  padding: $body-padding-mobile;
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: $body-padding-tablet;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    padding: $body-padding-desktop;
-  }
-}
-
-
 

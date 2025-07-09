@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,36 +11,54 @@ header{
     right: 0%;
     left: 0%;
     z-index: 10;
-  
 
-    .profile{
+
+    .profile {
         width: 2.5rem;
         aspect-ratio: 1/1;
         border-radius: 50%;
 
-        img{
-           @include profile-img;
+        img {
+            @include profile-img;
         }
     }
 
-    .all{
+    .all {
         display: flex;
         align-items: center;
         gap: .3rem;
 
-        button{
+        button {
             border: none;
-            background-color:#18181C ;
+            background-color: #18181C;
             padding: .1rem .5rem;
             border-radius: 1rem;
             cursor: pointer;
-            transition: all ease-in-out 0.3s ;
+            transition: all ease-in-out 0.3s;
         }
 
-        .music{
+        .music {
             background-color: $color-hero;
         }
-        
+
     }
 }
 
+
+@media (min-width:$breakpoint-tablet) {
+    header {
+        padding: 1.2rem 1.5rem 0.85rem 1.5rem;
+
+        .profile {
+            width: 3rem;
+        }
+
+        .all {
+            gap: .5rem;
+            button {
+                padding: .25rem .7rem;
+            }
+        }
+
+    }
+}

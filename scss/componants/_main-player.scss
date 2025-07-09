@@ -8,13 +8,14 @@ body {
         aspect-ratio: 2.1/1.15;
         display: grid;
         gap: 1rem;
-        
+
         .player-control {
             width: 100%;
             padding: $body-padding-mobile;
             display: flex;
             align-items: center;
             justify-content: space-between;
+       
 
 
             button {
@@ -39,7 +40,7 @@ body {
             justify-content: space-between;
             background: rgba(255, 255, 255, 0.01);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px); 
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 30px rgba(34, 138, 230, 0.01);
             border-radius: 1rem;
@@ -77,9 +78,11 @@ body {
 
     .player-image {
         padding: 1rem 2rem;
+        width: 100%;
 
         img {
             width: 100%;
+            object-fit: cover;
             border-radius: .5rem;
         }
     }
@@ -136,4 +139,40 @@ body {
 
     }
 
+}
+
+@media (min-width:$breakpoint-tablet) {
+    .player {
+        display: block;
+        place-items: center;
+        padding-bottom: 0;
+        .player-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .player-image {
+            display: grid;
+            place-items: center;
+
+            img {
+                width: 70%;
+            }
+        }
+
+        .player-info{
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+    }
+
+    body {
+        .player-controls {
+            padding: $body-padding-mobile;
+            aspect-ratio: 2.5/1;
+            gap: .5rem;
+            .player-control{
+                padding: $body-padding-tablet;
+            }
+        }
+    }
 }

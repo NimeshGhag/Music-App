@@ -1,0 +1,22 @@
+@import 'variables';
+
+
+
+  @media (min-width : $breakpoint-tablet) {
+    main{
+      padding: $body-padding-tablet !important;
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    main{
+      padding: $body-padding-desktop !important;
+    }
+  }
+
+  
+  @media (min-width: $breakpoint-mid-desktop) {
+    main{
+      padding: $body-padding-mid-desktop !important;
+    }
+  }

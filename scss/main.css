@@ -249,20 +249,21 @@ body {
   position: relative;
 }
 
-body {
-  padding: 1rem;
-}
 @media (min-width: 768px) {
-  body {
-    padding: 1.5rem;
+  main {
+    padding: 1.5rem !important;
   }
 }
 @media (min-width: 1024px) {
-  body {
-    padding: 2rem;
+  main {
+    padding: 2rem !important;
   }
 }
-
+@media (min-width: 1280px) {
+  main {
+    padding: 2.5rem !important;
+  }
+}
 .player-control button,
 .more-controls button,
 .player-header button {
@@ -367,6 +368,11 @@ footer .mini-player .progress-bar .progress {
   background-color: #5773FB;
 }
 
+@media (min-width: 768px) {
+  footer .mini-player {
+    padding: 0.35rem 1rem 0.45rem 1rem;
+  }
+}
 .genre-a {
   grid-area: a;
   background-color: #466A89;
@@ -470,9 +476,12 @@ body .player-controls .more-controls .share {
 }
 .player .player-image {
   padding: 1rem 2rem;
+  width: 100%;
 }
 .player .player-image img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.5rem;
 }
 .player .player-info {
@@ -520,6 +529,35 @@ body .player-controls .more-controls .share {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .player {
+    display: block;
+    place-items: center;
+    padding-bottom: 0;
+  }
+  .player .player-header {
+    margin-bottom: 1.5rem;
+  }
+  .player .player-image {
+    display: grid;
+    place-items: center;
+  }
+  .player .player-image img {
+    width: 70%;
+  }
+  .player .player-info {
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  body .player-controls {
+    padding: 1rem;
+    aspect-ratio: 2.5/1;
+    gap: 0.5rem;
+  }
+  body .player-controls .player-control {
+    padding: 1.5rem;
+  }
+}
 .sidebar {
   position: fixed;
   top: 0;
@@ -680,6 +718,11 @@ footer nav ul li:nth-child(4) i {
   animation: gredint-slide 4.5s linear infinite;
 }
 
+@media (min-width: 768px) {
+  footer nav {
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -723,13 +766,28 @@ header .all .music {
   background-color: #5773FB;
 }
 
+@media (min-width: 768px) {
+  header {
+    padding: 1.2rem 1.5rem 0.85rem 1.5rem;
+  }
+  header .profile {
+    width: 3rem;
+  }
+  header .all {
+    gap: 0.5rem;
+  }
+  header .all button {
+    padding: 0.25rem 0.7rem;
+  }
+}
 main {
   position: relative;
   width: 100%;
   margin-top: 4.5rem;
-  margin-bottom: 5.8rem;
+  margin-bottom: 7rem;
   display: grid;
   gap: 1rem;
+  padding: 0.5rem;
 }
 main .hero {
   position: relative;
@@ -827,7 +885,7 @@ main .view-1 .scroll-con {
   width: 100%;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 26%;
+  grid-auto-columns: 36%;
   padding: 0 0.5rem 1rem;
   gap: 1rem;
   overflow-x: auto;
@@ -973,9 +1031,39 @@ main .view-2 .bottom .genres-content .genre:hover {
   transform: scale(1.03);
 }
 
+@media (min-width: 768px) {
+  main .hero {
+    min-height: 18.75rem;
+  }
+  main .hero .hero-con {
+    gap: 1rem !important;
+  }
+  main .hero .hero-con .song-info .action {
+    gap: 1rem;
+  }
+  main .hero .hero-con .song-info .action .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 1.2rem;
+  }
+  main .hero .hero-con .song-info .action .btn-heart {
+    padding: 0.5rem 0.7rem;
+    border-radius: 3rem;
+  }
+  main .view-1 .scroll-con {
+    grid-auto-columns: 22.5%;
+  }
+  main .view-2 {
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+  main .view-2 .top .songs-con {
+    gap: 1rem;
+  }
+}
 .playlist-header {
   padding: 1rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: start;
   gap: 1rem;
   width: 100%;
@@ -1022,6 +1110,7 @@ main .view-2 .bottom .genres-content .genre:hover {
 .playlist-header .header-top .search-sort-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 0.5rem;
   width: 100%;
   padding: 1rem 0;
@@ -1140,4 +1229,25 @@ main .view-2 .bottom .genres-content .genre:hover {
 .browse-main .song-list .song-item:hover {
   background-color: #211F27;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .playlist-header .header-top .search-sort-wrapper i {
+    padding: 0.5rem 0.4rem 0.5rem 0.7rem;
+  }
+  .playlist-header .header-top .search-sort-wrapper form input {
+    padding: 0.5rem 0.4rem 0.5rem 0.7rem;
+  }
+  .playlist-header .heade-bottom {
+    padding-bottom: 0;
+  }
+  .playlist-header .heade-bottom .play-all-btn {
+    bottom: -36%;
+  }
+  .browse-main .song-list {
+    gap: 1rem;
+  }
+  .browse-main .song-list .song-item .song {
+    gap: 1rem;
+  }
 }

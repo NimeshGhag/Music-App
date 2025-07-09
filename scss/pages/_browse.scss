@@ -8,9 +8,10 @@
     @media (min-width: $breakpoint-desktop) {
         padding: $body-padding-desktop;
     }
-    
 
-    display: grid;
+
+    display: flex;
+    flex-direction: column;
     place-items: start;
     gap: 1rem;
     width: 100%;
@@ -34,6 +35,7 @@
         width: 100%;
 
 
+
         button {
             @include responsive-font($font-xl, $font-2xl, $font-3xl);
 
@@ -45,9 +47,11 @@
         .search-sort-wrapper {
             display: flex;
             align-items: center;
+            justify-content: center;
             border-radius: .5rem;
             width: 100%;
             padding: 1rem 0;
+            // background-color: #fff;
 
 
             i {
@@ -131,7 +135,8 @@
 
 .browse-main {
     display: grid;
-    margin-top:2rem;
+    margin-top: 2rem;
+
     padding: $body-padding-mobile;
 
     @media (min-width: $breakpoint-tablet) {
@@ -177,11 +182,51 @@
                 }
             }
 
-            &:hover{
+            &:hover {
                 background-color: $color-secondry;
                 cursor: pointer;
             }
 
         }
     }
+}
+
+@media (min-width:$breakpoint-tablet) {
+    .playlist-header {
+        .header-top {
+            .search-sort-wrapper {
+
+                i {
+                    padding: .5rem .4rem .5rem .7rem;
+                }
+
+                form {
+                    input {
+                        padding: .5rem .4rem .5rem .7rem;
+                    }
+                }
+            }
+        }
+        .heade-bottom {
+            padding-bottom: 0;
+            .play-all-btn{
+            bottom: -36%;
+            }
+        }
+    }
+
+
+    .browse-main {
+        .song-list{
+            gap: 1rem;
+            .song-item{
+               .song{
+                gap: 1rem;
+               }
+            }
+        }
+        
+    }
+
+
 }

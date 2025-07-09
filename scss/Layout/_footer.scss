@@ -30,7 +30,7 @@ footer {
         }
 
         &:nth-child(4)i {
-         @include animation($color-hero , $color-primary);
+          @include animation($color-hero , $color-primary);
         }
       }
     }
@@ -38,3 +38,11 @@ footer {
   }
 }
 
+
+@media (min-width:$breakpoint-tablet) {
+  footer {
+    nav {
+      padding: .3rem 1.5rem .3rem 1.5rem;
+    }
+  }
+}
