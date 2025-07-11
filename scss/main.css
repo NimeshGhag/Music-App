@@ -270,6 +270,7 @@ body {
     align-items: stretch;
   }
   body .all-con {
+    transition: width 0.3s ease, padding 0.3s ease;
     margin-left: auto;
     width: calc(100% - 300px);
     flex: 1;
@@ -334,6 +335,7 @@ footer {
   text-transform: capitalize;
 }
 footer .mini-player {
+  transition: padding 0.3s ease, height 0.3s ease;
   background-color: tomato;
   padding: 0.15rem 0.8rem 0.45rem 0.8rem;
   width: 100%;
@@ -683,7 +685,7 @@ body .player-controls .more-controls .share {
   width: min(90%, 300px);
   z-index: 100;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: width 0.3s ease, transform 0.3s ease-in-out;
   box-shadow: 2px 0 15px rgba(87, 115, 251, 0.2);
   text-transform: capitalize;
   background: rgba(255, 255, 255, 0.076);
@@ -845,6 +847,7 @@ footer {
   left: 0;
   bottom: 0;
   display: grid;
+  transition: padding 0.3s ease, height 0.3s ease;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
@@ -1297,6 +1300,7 @@ main .view-2 .bottom .genres-content .genre:hover {
   place-items: start;
   gap: 1rem;
   width: 100%;
+  transition: padding 0.3s ease, top 0.3s ease;
   background: linear-gradient(to bottom, rgba(255, 101, 199, 0.9843137255), rgba(0, 0, 0, 0.4));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1410,6 +1414,7 @@ main .view-2 .bottom .genres-content .genre:hover {
 
 .browse-main {
   display: grid;
+  transition: padding 0.3s ease;
   margin-top: 2rem;
   padding: 1rem;
 }

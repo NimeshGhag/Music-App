@@ -15,6 +15,8 @@
     place-items: start;
     gap: 1rem;
     width: 100%;
+    transition: padding 0.3s ease,
+    top 0.3s ease;
     // background: linear-gradient(to bottom, #ff65c7fb, #000000);
     @include linear-glass;
     // position: relative;
@@ -135,6 +137,7 @@
 
 .browse-main {
     display: grid;
+    transition: padding 0.3s ease;
     margin-top: 2rem;
 
     padding: $body-padding-mobile;
@@ -235,13 +238,13 @@
 }
 
 @media (min-width:$breakpoint-desktop) {
-    .playlist-header{
+    .playlist-header {
 
         .heade-bottom {
-    
+
             .play-all-btn {
                 padding: .1rem .6rem;
-    
+
             }
         }
     }

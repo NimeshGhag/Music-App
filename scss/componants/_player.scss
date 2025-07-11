@@ -2,6 +2,7 @@ footer {
     text-transform: capitalize;
 
     .mini-player {
+        transition: padding 0.3s ease, height 0.3s ease;
         background-color: tomato;
         padding: .15rem .8rem .45rem .8rem;
         width: 100%;

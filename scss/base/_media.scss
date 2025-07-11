@@ -2,31 +2,33 @@
 
 
 
-  @media (min-width : $breakpoint-tablet) {
-    main{
-      padding: $body-padding-tablet !important;
-    }
+@media (min-width : $breakpoint-tablet) {
+  main {
+    padding: $body-padding-tablet !important;
   }
+}
 
-  @media (min-width: $breakpoint-desktop) {
-    main{
-      padding: $body-padding-desktop !important;
-    }
+@media (min-width: $breakpoint-desktop) {
+  main {
+    padding: $body-padding-desktop !important;
   }
+}
 
-  
-  @media (min-width: $breakpoint-mid-desktop) {
-    main{
-      padding: $body-padding-mid-desktop !important;
-    }
+
+@media (min-width: $breakpoint-mid-desktop) {
+  main {
+    padding: $body-padding-mid-desktop !important;
   }
+}
 
 //for sidebar to be vislible
-  @media (min-width:$breakpoint-desktop) {
+@media (min-width:$breakpoint-desktop) {
   body {
     display: flex;
     align-items: stretch;
+
     .all-con {
+      transition: width 0.3s ease, padding 0.3s ease;
       margin-left: auto;
       // overflow: auto;
       width: calc(100% - 300px);
@@ -35,7 +37,7 @@
       flex-direction: column;
       min-height: 100vh;
 
-      main{
+      main {
         width: 100%;
       }
     }
