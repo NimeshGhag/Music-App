@@ -46,3 +46,14 @@ footer {
     }
   }
 }
+
+@media (min-width:$breakpoint-desktop) {
+  footer {
+    width: auto;
+    left: min(90%, 300px);
+    right: 0;
+      nav {
+      display: none;
+    }
+  }
+}

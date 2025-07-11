@@ -17,7 +17,7 @@
     width: 100%;
     // background: linear-gradient(to bottom, #ff65c7fb, #000000);
     @include linear-glass;
-    position: relative;
+    // position: relative;
     text-transform: capitalize;
     // border-bottom: 1px solid #fff;
     padding-bottom: 0;
@@ -207,26 +207,42 @@
                 }
             }
         }
+
         .heade-bottom {
             padding-bottom: 0;
-            .play-all-btn{
-            bottom: -36%;
+
+            .play-all-btn {
+                bottom: -36%;
             }
         }
     }
 
 
     .browse-main {
-        .song-list{
+        .song-list {
             gap: 1rem;
-            .song-item{
-               .song{
-                gap: 1rem;
-               }
+
+            .song-item {
+                .song {
+                    gap: 1rem;
+                }
             }
         }
-        
+
     }
 
 
+}
+
+@media (min-width:$breakpoint-desktop) {
+    .playlist-header{
+
+        .heade-bottom {
+    
+            .play-all-btn {
+                padding: .1rem .6rem;
+    
+            }
+        }
+    }
 }

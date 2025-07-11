@@ -13,7 +13,7 @@ header {
     z-index: 10;
 
 
-    .profile {
+    .profile,.profile-right {
         width: 2.5rem;
         aspect-ratio: 1/1;
         border-radius: 50%;
@@ -42,6 +42,10 @@ header {
         }
 
     }
+
+    .search-bar,.header-right{
+        display: none;
+    }
 }
 
 
@@ -60,5 +64,49 @@ header {
             }
         }
 
+    }
+}
+
+@media (min-width:$breakpoint-desktop) {
+    header {
+        left: min(90%, 300px); 
+        width: auto;
+        right: 0;
+        .profile {
+            display: none;
+        }
+        .search-bar{
+            background-color: $color-secondry;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            display: flex;
+            gap: .5rem;
+            border: 1px solid #333;
+            i{
+                padding-right: .5rem;
+            }
+             input{
+                border: none;
+                &:focus{
+                    outline: none;
+                }
+             }
+        }
+
+        .header-right{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .toggle-btn{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                 button{
+                    font-size: $font-lg;
+                 }
+            }
+        }
+        
     }
 }

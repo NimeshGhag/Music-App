@@ -22,6 +22,10 @@
         // color: $color-white;
         gap: 1rem;
 
+        .logo {
+            display: none;
+        }
+
         .profile-content {
             display: flex;
             align-items: center;
@@ -106,7 +110,7 @@
                     @include responsive-font($font-lg, $font-xl, $font-2xl);
                     cursor: pointer;
 
-                    &:nth-child(1){
+                    &:nth-child(1) {
                         color: $color-hero;
                     }
                 }
@@ -116,4 +120,47 @@
         }
     }
 
+}
+
+@media (min-width:$breakpoint-desktop) {
+    .sidebar {
+        transform: translateX(0);
+        width: min(90%, 300px);
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        background-color: $color-secondry;
+
+        .sidebar-content {
+            .profile-content {
+                display: none;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                padding: 1rem 0;
+                border-bottom: 1px solid #7a7a7a;
+
+                i {
+                    // font-size: $font-lg;
+                    @include animation($color-hero , $color-primary);
+                }
+            }
+
+            ul {
+                gap: 1.5rem;
+
+                li {
+                    gap: 1rem;
+                }
+            }
+
+             .toggle{
+                display: none;
+             }
+        }
+    }
 }

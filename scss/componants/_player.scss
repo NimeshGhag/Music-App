@@ -65,10 +65,109 @@ footer {
     }
 }
 
-@media (min-width:$breakpoint-tablet) {
-  footer {
-    .mini-player{
-      padding: .35rem 1rem .45rem 1rem;
+@media (width <=$breakpoint-desktop) {
+    footer {
+        .mini-player {
+            .track {
+
+                .track-action {
+                    button {
+
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(6),
+                        &:nth-child(7) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .volume {
+                    display: none;
+                }
+            }
+        }
     }
-  }
+}
+
+@media (min-width:$breakpoint-tablet) {
+    footer {
+        .mini-player {
+            padding: .35rem 1rem .45rem 1rem;
+        }
+    }
+}
+
+@media (min-width:$breakpoint-desktop) {
+    footer {
+        .mini-player {
+            background-color: $color-primary;
+
+            .track {
+                .track-action {
+                    gap: 2rem;
+
+                    button {
+                        font-size: $font-xl;
+
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            display: none;
+                        }
+
+                        &:nth-child(5) {
+                            color: $color-hero;
+                            padding: .5rem 1rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 1rem;
+                            box-shadow: 0 4px 30px rgba(87, 115, 251, 0.11);
+
+                        }
+                    }
+                }
+
+                .volume {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    input[type=range] {
+                        appearance: none;
+                        width: 100%;
+                        height: 1.5px;
+                        background: linear-gradient(to right,
+                                $color-hero 0%,
+                                $color-hero var(--progress, 30%),
+                                $color-white var(--progress, 40%),
+                                $color-white 100%);
+                        border-radius: 3px;
+                        outline: none;
+                        cursor: pointer;
+
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 8px;
+                            height: 8px;
+                            background: $color-hero;
+                            border-radius: 50%;
+                            margin-top: -4px;
+                            transition: background 0.3s ease;
+                        }
+
+                        &::-moz-range-thumb {
+                            width: 8px;
+                            height: 8px;
+                            background: $color-hero;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
