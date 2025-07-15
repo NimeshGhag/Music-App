@@ -1186,17 +1186,18 @@ main .view-2 .top .songs-con .song .song-tittle img {
 }
 main .view-2 .top .songs-con .song .song-tittle .song-tittle_info {
   display: grid;
+  gap: 0.3rem;
 }
 main .view-2 .top .songs-con .song .song-tittle .song-tittle_info small {
   opacity: 0.6;
 }
-main .view-2 .top .songs-con .song .somg-info {
+main .view-2 .top .songs-con .song .song-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
 }
-main .view-2 .top .songs-con .song .somg-info button {
+main .view-2 .top .songs-con .song .song-info button {
   padding: 2px;
   background-color: #18181C;
   border: 1px solid #5773FB;
@@ -1205,7 +1206,7 @@ main .view-2 .top .songs-con .song .somg-info button {
   place-items: center;
   transition: all 0.3s ease;
 }
-main .view-2 .top .songs-con .song:hover .somg-info button {
+main .view-2 .top .songs-con .song:hover .song-info button {
   background-color: #5773FB;
   color: #FFFFFF;
 }
@@ -1459,6 +1460,10 @@ main .view-2 .bottom .genres-content .genre:hover {
 }
 .browse-main .song-list .song-item .song .song-info small {
   opacity: 0.6;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .browse-main .song-list .song-item:hover {
   background-color: #211F27;

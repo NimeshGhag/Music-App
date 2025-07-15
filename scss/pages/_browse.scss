@@ -181,6 +181,10 @@
 
                     small {
                         opacity: .6;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
                     }
                 }
             }

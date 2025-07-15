@@ -211,6 +211,7 @@ main {
 
                         .song-tittle_info {
                             display: grid;
+                            gap: .3rem;
 
                             small {
                                 opacity: .6;
@@ -219,7 +220,7 @@ main {
 
                     }
 
-                    .somg-info {
+                    .song-info {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -238,7 +239,7 @@ main {
                     }
 
                     &:hover {
-                        .somg-info button {
+                        .song-info button {
                             background-color: $color-hero;
                             color: $color-white;
                         }
