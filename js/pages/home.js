@@ -1,6 +1,8 @@
 import { playlist } from "../services/songServices.js";
+import { artists } from "../services/songServices.js";
 
 let trending = document.querySelector(".songs-con");
+let topArtist = document.querySelector(".top-artist");
 
 function trendingRender() {
     let trendingSongs = "";
@@ -31,10 +33,29 @@ function trendingRender() {
     trending.innerHTML = trendingSongs;
 }
 
+function topartist() {
+    let artist = "";
+    artists.forEach((e) => {
+        artist += `    <div class="artist">
+                        <div class="artist-img">
+                            <img src="${e.img}"
+                                alt="">
+                        </div>
+                        <div class="artst-name">
+                            <h4>${e.name}</h4>
+                        </div>
+                    </div>`
+    });
+
+    topArtist.innerHTML = artist;
+}
+
 // Initial render
 trendingRender();
+topartist();
 
 // Re-render songs when window is resized
 window.addEventListener("resize", () => {
     trendingRender();
+    topartist();
 });

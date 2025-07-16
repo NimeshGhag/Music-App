@@ -80,7 +80,38 @@ export const playlist = [
 
 export const artists =[
     {
-        img:'',
-        name:'',
-    }
+        name:'Billie Eilish',
+        img:'../assets/images/artists/billi.webp',
+    },
+
+     {
+        name:'taylor swift',
+        img:'../assets/images/artists/talyor.webp',
+    },
+
+      {
+        name:'ed sheeran',
+        img:'../assets/images/artists/ed sheeran.webp',
+    },
+
+      {
+        name:'shakira',
+        img:'../assets/images/artists/shakira.webp',
+    },
+
+      {
+        name:'Arijit singh',
+        img:'../assets/images/artists/arjeetsingh.webp',
+    },
+
+      {
+        name:'bruno mars',
+        img:'../assets/images/artists/bruno mass.webp',
+    },
+
+      {
+        name:'a.r rahman',
+        img:'../assets/images/artists/a.r rehaman.webp',
+    },
+
 ]
