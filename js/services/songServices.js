@@ -77,41 +77,75 @@ export const playlist = [
     },
 ];
 
-
-export const artists =[
+export const artists = [
     {
-        name:'Billie Eilish',
-        img:'../assets/images/artists/billi.webp',
+        name: "Billie Eilish",
+        img: "../assets/images/artists/billi.webp",
     },
 
-     {
-        name:'taylor swift',
-        img:'../assets/images/artists/talyor.webp',
+    {
+        name: "taylor swift",
+        img: "../assets/images/artists/talyor.webp",
+    },
+
+    {
+        name: "ed sheeran",
+        img: "../assets/images/artists/ed sheeran.webp",
+    },
+
+    {
+        name: "shakira",
+        img: "../assets/images/artists/shakira.webp",
+    },
+
+    {
+        name: "Arijit singh",
+        img: "../assets/images/artists/arjeetsingh.webp",
+    },
+
+    {
+        name: "bruno mars",
+        img: "../assets/images/artists/bruno mass.webp",
+    },
+
+    {
+        name: "a.r rahman",
+        img: "../assets/images/artists/a.r rehaman.webp",
+    },
+];
+
+export const Albums = [
+    {
+        name: "old is gold",
+        img: "../assets/images/albums/old is gold.webp",
+    },
+
+    {
+        name: "Lofi vibe",
+        img: "../assets/images/albums/lofi vibe hindi.webp",
+    },
+    {
+        name: "all out hindi",
+        img: "../assets/images/albums/All out hindi 2000.webp",
+    },
+
+    {
+        name: "Marathi party",
+        img: "../assets/images/albums/marathi party.webp",
+    },
+
+    {
+        name: "sangeet night",
+        img: "../assets/images/albums/sangeetnight.webp",
+    },
+
+    {
+        name: "Holi party",
+        img: "../assets/images/albums/holi party.webp",
     },
 
       {
-        name:'ed sheeran',
-        img:'../assets/images/artists/ed sheeran.webp',
+        name: "pawankhind",
+        img: "../assets/images/albums/pawankhind.webp",
     },
-
-      {
-        name:'shakira',
-        img:'../assets/images/artists/shakira.webp',
-    },
-
-      {
-        name:'Arijit singh',
-        img:'../assets/images/artists/arjeetsingh.webp',
-    },
-
-      {
-        name:'bruno mars',
-        img:'../assets/images/artists/bruno mass.webp',
-    },
-
-      {
-        name:'a.r rahman',
-        img:'../assets/images/artists/a.r rehaman.webp',
-    },
-
-]
+];

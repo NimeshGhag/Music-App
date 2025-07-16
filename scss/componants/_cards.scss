@@ -3,8 +3,8 @@
          .artist {
              display: grid;
              grid-template-rows: min-content;
-             border-radius: .3rem;
-             gap: .5rem;
+             border-radius: .5rem;
+             gap: .8rem;
              place-items: center;
              padding: .3rem;
              cursor: pointer;
@@ -19,6 +19,7 @@
                  width: 100%;
                  border-radius: 1rem;
                  background-color: #fff;
+                 margin-top: .5rem;
 
                  img {
                      inline-size: 100%;
@@ -29,4 +30,8 @@
              }
          }
      }
+ }
+
+ @media (screen) {
+    
  }
