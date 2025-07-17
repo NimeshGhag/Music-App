@@ -1,10 +1,18 @@
 import { playlist } from "../services/songServices.js";
 import { artists } from "../services/songServices.js";
 import { Albums } from "../services/songServices.js";
+import { backgroundPoster } from "../services/songServices.js";
 
 let trending = document.querySelector(".songs-con");
 let topArtist = document.querySelector(".top-artist");
 let topAlbum = document.querySelector(".top-albums");
+
+//hero section elements
+let heroSection = document.querySelector(".hero");
+let heroCon = document.querySelector(".hero-con");
+let tittleEl = document.querySelector(".song-info h1");
+let artistEl = document.querySelector(".song-info h3");
+let dots = document.querySelectorAll(".dot");
 
 function trendingRender() {
     let trendingSongs = "";
@@ -35,7 +43,7 @@ function trendingRender() {
     trending.innerHTML = trendingSongs;
 }
 
-function topartist() {
+function topArt() {
     let artist = "";
     artists.forEach((e) => {
         artist += `    <div class="artist">
@@ -43,7 +51,7 @@ function topartist() {
                             <img src="${e.img}"
                                 alt="">
                         </div>
-                        <div class="artst-name">
+                        <div class="artist-name">
                             <h4>${e.name}</h4>
                         </div>
                     </div>`;
@@ -69,14 +77,46 @@ function topAlbums() {
     topAlbum.innerHTML = album;
 }
 
+//hero element function
+let currentIndex = 0;
+
+function updateHeroContent() {
+    const bgData = backgroundPoster[currentIndex];
+
+    //slide animation
+    heroSection.classList.remove("slide-in");
+    heroSection.classList.add("slide-out");
+    heroCon.classList.remove("slide-in");
+    heroCon.classList.add("slide-out");
+
+    setTimeout(() => {
+        heroSection.style.backgroundImage = bgData.img;
+        tittleEl.textContent = bgData.tittle;
+        artistEl.textContent = bgData.artist;
+        heroSection.classList.remove("slide-out");
+        heroSection.classList.add("slide-in");
+        heroCon.classList.remove("slide-out");
+        heroCon.classList.add("slide-in");
+    }, 1050);
+
+    dots.forEach((dot,idx)=>{
+        dot.classList.toggle('active',idx===currentIndex);
+    })
+
+    currentIndex = (currentIndex + 1) % backgroundPoster.length;
+}
+
+updateHeroContent();
+setInterval(updateHeroContent, 5000);
+
 // Initial render
 trendingRender();
-topartist();
+topArt();
 topAlbums();
 
 // Re-render songs when window is resized
 window.addEventListener("resize", () => {
     trendingRender();
-    topartist();
+    topArt();
     topAlbums();
 });

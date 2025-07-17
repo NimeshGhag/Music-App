@@ -6,6 +6,26 @@
     background-position: -100% 0%;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/inter/Inter_18pt-Light.woff2") format("woff2");
@@ -76,6 +96,26 @@
   }
   100% {
     background-position: -100% 0%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }
 .logo {
@@ -232,6 +272,26 @@ button {
   }
   100% {
     background-position: -100% 0%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }
 body {
@@ -1007,17 +1067,26 @@ main {
 }
 main .hero {
   position: relative;
+  text-transform: capitalize;
   width: 100%;
   display: flex;
   align-items: center;
-  background-image: url(/assets/images/artists/Ed_Sheeran_750x400-removebg-preview.png);
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
 }
+main .hero.slide-in {
+  animation: fadeIn 1s ease forwards;
+  transition: all 0.5s ease-in-out;
+}
+main .hero.slide-out {
+  animation: fadeOut 1s ease forwards;
+  transition: all 0.5s ease-in-out;
+}
 main .hero .hero-con {
+  animation: fadeIn 1s ease forwards;
   width: 100%;
   padding: 2rem auto;
   display: grid;
@@ -1055,6 +1124,14 @@ main .hero .hero-con .song-info .action .btn-heart {
   cursor: pointer;
   transition: all ease-in-out 0.3s;
 }
+main .hero .hero-con.slide-in {
+  animation: fadeIn 1s ease forwards;
+  transition: all 0.5s ease-in-out;
+}
+main .hero .hero-con.slide-out {
+  animation: fadeOut 1s ease forwards;
+  transition: all 0.5s ease-in-out;
+}
 main .hero .dots {
   width: 20px;
   height: 100%;
@@ -1071,8 +1148,9 @@ main .hero .dots .dot {
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
+  transition: background 0.3s;
 }
-main .hero .dots .dot:first-child {
+main .hero .dots .dot.active {
   opacity: 0.5;
 }
 main .view-1 {

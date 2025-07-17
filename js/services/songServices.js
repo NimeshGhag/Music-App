@@ -149,3 +149,31 @@ export const Albums = [
         img: "../assets/images/albums/pawankhind.webp",
     },
 ];
+
+//list of hero section i
+
+export const backgroundPoster = [
+    {
+        img:'url(/assets/images/artists/hero/Ed_Sheeran_750x400-removebg-preview.png)',
+        tittle:'Shape of You',
+        artist:'ed sheeran'
+    },
+
+      {
+        img:'url(/assets/images/artists/hero/aww.png)',
+        tittle:'Faded',
+        artist:'Alan Walker'
+    },
+
+      {
+        img:'url(/assets/images/artists/hero/tss.png)',
+        tittle:'blank Space',
+        artist:'Taylor Swift'
+    },
+
+      {
+        img:'url(/assets/images/artists/hero/as.png)',
+        tittle:'sajni re',
+        artist:'Arijit singh'
+    },
+]
