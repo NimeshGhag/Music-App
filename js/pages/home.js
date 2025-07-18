@@ -2,6 +2,8 @@ import { playlist } from "../services/songServices.js";
 import { artists } from "../services/songServices.js";
 import { Albums } from "../services/songServices.js";
 import { backgroundPoster } from "../services/songServices.js";
+import{playMusic}from"../player/audio.js"
+
 
 let trending = document.querySelector(".songs-con");
 let topArtist = document.querySelector(".top-artist");
@@ -14,10 +16,11 @@ let tittleEl = document.querySelector(".song-info h1");
 let artistEl = document.querySelector(".song-info h3");
 let dots = document.querySelectorAll(".dot");
 
+
 function trendingRender() {
     let trendingSongs = "";
     playlist.slice(0, 3).forEach((e, i) => {
-        trendingSongs += `<div class="song">
+        trendingSongs += `<div class="song" data-index="${i}">
                             <div class="song-tittle">
                                 <small>${String(i + 1).padStart(2, "0")}</small>
                                 <img src="${e.img}" alt="">
@@ -41,7 +44,11 @@ function trendingRender() {
     });
 
     trending.innerHTML = trendingSongs;
+    playMusic();
+    
 }
+
+
 
 function topArt() {
     let artist = "";
@@ -99,9 +106,9 @@ function updateHeroContent() {
         heroCon.classList.add("slide-in");
     }, 1050);
 
-    dots.forEach((dot,idx)=>{
-        dot.classList.toggle('active',idx===currentIndex);
-    })
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle("active", idx === currentIndex);
+    });
 
     currentIndex = (currentIndex + 1) % backgroundPoster.length;
 }

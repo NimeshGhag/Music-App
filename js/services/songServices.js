@@ -14,7 +14,7 @@ export const playlist = [
     },
 
     {
-        title: "Gallan Goodiyaan'",
+        title: "Gallan Goodiyaan",
         img: "../assets/images/music poster/dill dhadkane do.webp",
         artist: "MANISH KUMAR TIPU, Yashita Yashpal Sharma, Shankar Mahadevan, Farhan Akhtar, Javed Akhtar, Sukhwinder Singh",
         url: "../assets/music/'Gallan Goodiyaan' Full VIDEO Song  Dil Dhadakne Do  T-Series - T-Series.mp3",

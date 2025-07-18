@@ -1,11 +1,13 @@
 import { playlist } from "../services/songServices.js";
+import{playMusic}from"../player/audio.js"
+
 let songsList = document.querySelector(".song-list");
 
 function renderSongs() {
     let browseSongs = "";
 
     playlist.forEach((e, i) => {
-        browseSongs += `  <div class="song-item ">
+        browseSongs += `  <div class="song-item" data-index="${i}">
                     <div class="song">
                         <img src="${e.img}"
                             alt="Thumbnail" />
@@ -27,6 +29,8 @@ function renderSongs() {
     });
 
     songsList.innerHTML = browseSongs;
+    playMusic();
+
 }
 
 // Initial render
