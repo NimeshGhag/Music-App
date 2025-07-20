@@ -31,6 +31,10 @@ h3 {
   @include responsive-font($font-base, $font-lg, $font-xl);
 }
 
+.track-title{
+  @include responsive-font($font-base, $font-base, $font-md);
+}
+
 //player artist name, artist name
 h4 {
   font-family: $font-inter;

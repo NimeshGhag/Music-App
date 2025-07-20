@@ -184,6 +184,20 @@ h3 {
   }
 }
 
+.track-title {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .track-title {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .track-title {
+    font-size: 1.125rem;
+  }
+}
+
 h4 {
   font-family: "Inter", sans-serif;
   font-weight: 400;

@@ -15,6 +15,7 @@ export function updateMiniPlayer(song) {
 export function setUpMiniPlayerControls() {
     const playBtn = document.getElementById("mini-play-button");
     const nextBtn = document.querySelector("#next-button");
+    const prevBtn = document.querySelector("#prev-button");
 
     playBtn.addEventListener("click", () => {
         const icon = playBtn.querySelector("i");
@@ -31,10 +32,19 @@ export function setUpMiniPlayerControls() {
 
     nextBtn.addEventListener("click", () => {
         let nextIndex = (currentSongIndex + 1) % playlist.length;
-        let nextSong = playlist[nextIndex]
+        let nextSong = playlist[nextIndex];
         if (nextSong) {
             playSong(nextSong, nextIndex);
             updateMiniPlayer(nextSong);
+        }
+    });
+
+    prevBtn.addEventListener("click", () => {
+        let prevIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        let prevSong = playlist[prevIndex];
+        if (prevSong) {
+            playSong(prevSong, prevIndex);
+            updateMiniPlayer(prevSong);
         }
     });
 }
