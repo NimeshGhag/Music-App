@@ -185,7 +185,7 @@ h3 {
 }
 
 .track-title {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 768px) {
   .track-title {
@@ -460,6 +460,9 @@ footer .mini-player .progress-bar .progress {
   width: 50%;
   height: 100%;
   background-color: #5773FB;
+}
+footer .hide {
+  display: none;
 }
 
 @media (width <= 1024px) {

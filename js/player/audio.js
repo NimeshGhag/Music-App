@@ -2,6 +2,7 @@ export const audio = new Audio();
 export let currentSongIndex = null;
 import { playlist } from "../services/songServices.js";
 import {updateMiniPlayer , setUpMiniPlayerControls} from './mini-player.js';
+import { updateMini } from "../Layout/footer.js";
 
 setUpMiniPlayerControls();
 
@@ -14,10 +15,11 @@ export function playSong(song, index) {
 export function playMusic() {
     document.querySelectorAll(".song , .song-item").forEach((songDiv) => {
         songDiv.addEventListener("click", (e) => {
-            const songIndex = songDiv.dataset.index;
+            const songIndex = parseInt(songDiv.dataset.index);
             const selectedSong = playlist[songIndex];
             playSong(selectedSong, songIndex);
             updateMiniPlayer(selectedSong);
+            updateMini(selectedSong)
         });
     });
 }

@@ -4,6 +4,7 @@ export const playlist = [
         img: "../assets/images/music poster/Zindagi-Na-Milegi-Dobara-2011-500x500.webp",
         artist: " Farhan Akhtar, Hrithik Roshan,  Abhay Deol",
         url: "../assets/music/Senorita Zindagi Na Milegi Dobara Full HD Video Song  Farhan Akhtar, Hrithik Roshan, Abhay Deol - T-Series.mp3",
+        bgColor : '#f76d58ff',
     },
 
     {
@@ -11,6 +12,7 @@ export const playlist = [
         img: "../assets/images/music poster/ed Sheeran.webp",
         artist: "Ed Sheeran",
         url: "../assets/music/Ed Sheeran - Shape of You (Lyrics) - 7clouds.mp3",
+        bgColor : '#358488ff',
     },
 
     {
@@ -18,6 +20,7 @@ export const playlist = [
         img: "../assets/images/music poster/dill dhadkane do.webp",
         artist: "MANISH KUMAR TIPU, Yashita Yashpal Sharma, Shankar Mahadevan, Farhan Akhtar, Javed Akhtar, Sukhwinder Singh",
         url: "../assets/music/'Gallan Goodiyaan' Full VIDEO Song  Dil Dhadakne Do  T-Series - T-Series.mp3",
+        bgColor : '#192037',
     },
 
     {
@@ -25,6 +28,7 @@ export const playlist = [
         img: "../assets/images/music poster/sajni re.webp",
         artist: "Arijit Singh",
         url: "../assets/music/Sajni (Lyrical Video) Arijit Singh, Ram Sampath  Laapataa Ladies   Aamir Khan Productions - T-Series.mp3",
+        bgColor : '#724506ff',
     },
 
     {
@@ -32,6 +36,7 @@ export const playlist = [
         img: "../assets/images/music poster/Chennai_Express-Kashmir-Main-Tu-Kanyakumari.webp",
         artist: " Neeti Mohan, Arijit Singh, Sunidhi Chauhan",
         url: "../assets/music/Kashmir Main Tu Kanyakumari(Lyrical)Chennai Express Shahrukh K, Deepika P,Sunidhi C,Arijit S,Neeti - T-Series.mp3",
+        bgColor : '#eb813aff',
     },
 
     {
@@ -39,6 +44,7 @@ export const playlist = [
         img: "../assets/images/music poster/malhari.webp",
         artist: "Vishal Dadlani",
         url: "../assets/music/Malhari Full Video Song  Bajirao Mastani  Ranveer Singh - Eros Now Music.mp3",
+        bgColor : '#5A1115',
     },
 
     {
@@ -46,6 +52,7 @@ export const playlist = [
         img: "../assets/images/music poster/sairat.webp",
         artist: "Ajay-Atul",
         url: "../assets/music/Zingaat - Sairat  Official Full Video with English subtitles  Nagraj Manjule  Ajay Atul - Zee Music Marathi.mp3",
+        bgColor : '#CA612D',
     },
 
     {
@@ -53,6 +60,7 @@ export const playlist = [
         img: "../assets/images/music poster/nacho nacho.webp",
         artist: "Vishal Mishra, Rahul Sipligunj",
         url: "../assets/music/Naacho Naacho (Full Video) RRR - NTR, Ram Charan  M M Kreem  SS Rajamouli  Vishal Mishra & Rahul - T-Series.mp3",
+        bgColor : '#6D5244',
     },
 
     {
@@ -60,6 +68,7 @@ export const playlist = [
         img: "../assets/images/music poster/namo-namo-kedarnath.webp",
         artist: "Amit Trivedi",
         url: "../assets/music/Namo Namo - Lyrical  Kedarnath  Sushant Rajput  Sara Ali Khan  Amit Trivedi  Amitabh B - Zee Music Company.mp3",
+        bgColor : '#AC85E7',
     },
 
     {
@@ -67,6 +76,7 @@ export const playlist = [
         img: "../assets/images/music poster/kajra re.webp",
         artist: "Alisha Chinai, Shankar Mahadevan, Javed Ali",
         url: "../assets/music/Kajra Re  Full Song  Bunty Aur Babli  Aishwarya, Abhishek, Amitabh Bachchan  Shankar-Ehsaan-Loy - YRF.mp3",
+        bgColor : '#a11d6cff',
     },
 
     {
@@ -74,6 +84,7 @@ export const playlist = [
         img: "../assets/images/music poster/M-S-Dhoni-The-Untold-Story-3-Hindi-2016-500x500.webp",
         artist: " Amaal Mallik, Armaan Malik",
         url: "../assets/music/BESABRIYAAN Full Video Song  M. S. DHONI - THE UNTOLD STORY  Sushant Singh Rajput - T-Series.mp3",
+        bgColor : '#7a8f8bff',
     },
 ];
 

@@ -64,6 +64,10 @@ footer {
             }
         }
     }
+
+    .hide{
+        display: none;
+    }
 }
 
 @media (width <=$breakpoint-desktop) {

@@ -32,7 +32,7 @@ h3 {
 }
 
 .track-title{
-  @include responsive-font($font-base, $font-base, $font-md);
+  @include responsive-font($font-xs, $font-base, $font-md);
 }
 
 //player artist name, artist name
