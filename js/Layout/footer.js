@@ -8,3 +8,4 @@ export function updateMini(song){
     mini.style.backgroundColor = '#18181C'
    }
 }
+

@@ -1,7 +1,7 @@
 export const audio = new Audio();
 export let currentSongIndex = null;
 import { playlist } from "../services/songServices.js";
-import {updateMiniPlayer , setUpMiniPlayerControls} from './mini-player.js';
+import {updateMiniPlayer , setUpMiniPlayerControls , resetProgessBar} from './mini-player.js';
 import { updateMini } from "../Layout/footer.js";
 
 setUpMiniPlayerControls();
@@ -10,6 +10,7 @@ export function playSong(song, index) {
     audio.src = song.url;
     audio.play();
     currentSongIndex = index;
+    resetProgessBar()
 }
 
 export function playMusic() {

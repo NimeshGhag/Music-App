@@ -16,6 +16,8 @@ export function setUpMiniPlayerControls() {
     const playBtn = document.getElementById("mini-play-button");
     const nextBtn = document.querySelector("#next-button");
     const prevBtn = document.querySelector("#prev-button");
+    const progressBar = document.querySelector(".progress");
+    const thumbBar = document.querySelector(".thumb");
 
     playBtn.addEventListener("click", () => {
         const icon = playBtn.querySelector("i");
@@ -40,11 +42,34 @@ export function setUpMiniPlayerControls() {
     });
 
     prevBtn.addEventListener("click", () => {
-        let prevIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        let prevIndex =
+            (currentSongIndex - 1 + playlist.length) % playlist.length;
         let prevSong = playlist[prevIndex];
         if (prevSong) {
             playSong(prevSong, prevIndex);
             updateMiniPlayer(prevSong);
         }
     });
+
+    audio.addEventListener("timeupdate", () => {
+        let current = audio.currentTime;
+        let total = audio.duration;
+        if (!total || isNaN(total)) return;
+
+        let percent = (current / total) * 100;
+        progressBar.style.width = `${percent}%`;
+        thumbBar.style.left = `${percent}%`;
+    });
+
+    audio.addEventListener("ended", () => {
+        resetProgessBar();
+    });
+ 
+}
+
+export function resetProgessBar() {
+    const progressBar = document.querySelector(".progress");
+    const thumbBar = document.querySelector(".thumb");
+    progressBar.style.width = `0%`;
+    thumbBar.style.left = `0%`;
 }

@@ -457,9 +457,24 @@ footer .mini-player .progress-bar {
   left: 0;
 }
 footer .mini-player .progress-bar .progress {
-  width: 50%;
   height: 100%;
   background-color: #5773FB;
+  z-index: 2;
+  position: relative;
+}
+footer .mini-player .progress-bar .thumb {
+  background-color: #5773FB;
+  border: 1px solid #FFFFFF;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(40%);
+  pointer-events: none;
+  z-index: 3;
+  transition: left 0.1s linear, width 0.1s linear;
 }
 footer .hide {
   display: none;
@@ -533,6 +548,11 @@ footer .hide {
     background: #5773FB;
     border-radius: 50%;
     cursor: pointer;
+  }
+  footer .mini-player .progress-bar .thumb {
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 50%;
   }
 }
 .genre-a {
@@ -968,6 +988,7 @@ footer nav ul li:nth-child(4) i {
     width: auto;
     left: min(90%, 300px);
     right: 0;
+    bottom: 4px;
   }
   footer nav {
     display: none;
