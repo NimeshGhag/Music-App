@@ -64,6 +64,8 @@ export function setUpMiniPlayerControls() {
 
     audio.addEventListener("ended", () => {
         resetProgessBar();
+        const icon = playBtn.querySelector("i");
+        icon.className = "ri-play-mini-fill";
     });
 
     progressCon.addEventListener("click", (e) => {
@@ -80,7 +82,7 @@ export function setUpMiniPlayerControls() {
     let isDragging = false;
     let per = 0;
 
-    function onMouseMove() {
+    function onMouseMove(e) {
         const mouseX = e.clientX;
         const barWidth = progressCon.clientWidth;
         const barStartX = progressCon.getBoundingClientRect().left;
