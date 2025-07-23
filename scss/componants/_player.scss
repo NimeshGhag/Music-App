@@ -56,6 +56,7 @@ footer {
             bottom: 0;
             right: 0;
             left: 0;
+            cursor: pointer;
 
             .progress {
                 height: 100%;
@@ -74,9 +75,10 @@ footer {
                 bottom: 0;
                 left: 0;
                 transform: translateY(40%);
-                pointer-events: none;
+                // pointer-events: none;
                 z-index: 3;
                 transition: left 0.1s linear, width 0.1s linear;
+                cursor: pointer;
             }
         }
     }

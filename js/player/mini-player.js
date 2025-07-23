@@ -16,6 +16,7 @@ export function setUpMiniPlayerControls() {
     const playBtn = document.getElementById("mini-play-button");
     const nextBtn = document.querySelector("#next-button");
     const prevBtn = document.querySelector("#prev-button");
+    const progressCon = document.querySelector(".progress-bar");
     const progressBar = document.querySelector(".progress");
     const thumbBar = document.querySelector(".thumb");
 
@@ -64,7 +65,51 @@ export function setUpMiniPlayerControls() {
     audio.addEventListener("ended", () => {
         resetProgessBar();
     });
- 
+
+    progressCon.addEventListener("click", (e) => {
+        const clickX = e.offsetX;
+        const barWidth = progressCon.clientWidth;
+
+        const clickPersent = clickX / barWidth;
+
+        if (audio.duration && !isNaN(audio.duration)) {
+            audio.currentTime = clickPersent * audio.duration;
+        }
+    });
+
+    let isDragging = false;
+    let per = 0;
+
+    function onMouseMove() {
+        const mouseX = e.clientX;
+        const barWidth = progressCon.clientWidth;
+        const barStartX = progressCon.getBoundingClientRect().left;
+        const relativeX = mouseX - barStartX;
+        per = (relativeX / barWidth) * 100;
+        if (per < 0) {
+            per = 0;
+        } else if (per > 100) {
+            per = 100;
+        }
+
+        progressBar.style.width = `${per}%`;
+        thumbBar.style.left = `${per}%`;
+    }
+
+    function onMouseUp() {
+        isDragging = false;
+        audio.currentTime = (per / 100) * audio.duration;
+        document.body.style.userSelect = "auto";
+
+        window.removeEventListener("mousemove", onMouseMove);
+        window.removeEventListener("mouseup", onMouseUp);
+    }
+    thumbBar.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        document.body.style.userSelect = "none";
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("mouseup", onMouseUp);
+    });
 }
 
 export function resetProgessBar() {
