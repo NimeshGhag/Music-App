@@ -1,6 +1,7 @@
 import { audio, currentSongIndex, playSong } from "./audio.js";
 import { playlist } from "../services/songServices.js";
 let check = 0;
+let isRepeat = false;
 
 export function updateMiniPlayer(song) {
     document.querySelector(".track img").src = song.img;
@@ -18,6 +19,7 @@ export function setUpMiniPlayerControls() {
     const nextBtn = document.querySelector("#next-button");
     const prevBtn = document.querySelector("#prev-button");
     const shufBtn = document.querySelector("#shuffle-button");
+    const repeatBtn = document.querySelector("#loop-button");
     const progressCon = document.querySelector(".progress-bar");
     const progressBar = document.querySelector(".progress");
     const thumbBar = document.querySelector(".thumb");
@@ -59,6 +61,11 @@ export function setUpMiniPlayerControls() {
         }
     });
 
+    repeatBtn.addEventListener("click", () => {
+        isRepeat = !isRepeat;
+        repeatBtn.style.color = isRepeat ? "#5773FB" : "#fff";
+    });
+
     audio.addEventListener("timeupdate", () => {
         let current = audio.currentTime;
         let total = audio.duration;
@@ -73,7 +80,12 @@ export function setUpMiniPlayerControls() {
         resetProgessBar();
         const icon = playBtn.querySelector("i");
         icon.className = "ri-play-mini-fill";
-        playNextSong();
+        if(isRepeat){
+            playSong(playlist[currentSongIndex],currentSongIndex)
+            updateMiniPlayer(playlist[currentSongIndex])
+        }else{
+            playNextSong()
+        }
     });
 
     progressCon.addEventListener("click", (e) => {
