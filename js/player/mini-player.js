@@ -1,5 +1,6 @@
 import { audio, currentSongIndex, playSong } from "./audio.js";
 import { playlist } from "../services/songServices.js";
+let check = 0;
 
 export function updateMiniPlayer(song) {
     document.querySelector(".track img").src = song.img;
@@ -16,6 +17,7 @@ export function setUpMiniPlayerControls() {
     const playBtn = document.getElementById("mini-play-button");
     const nextBtn = document.querySelector("#next-button");
     const prevBtn = document.querySelector("#prev-button");
+    const shufBtn = document.querySelector("#shuffle-button");
     const progressCon = document.querySelector(".progress-bar");
     const progressBar = document.querySelector(".progress");
     const thumbBar = document.querySelector(".thumb");
@@ -34,12 +36,7 @@ export function setUpMiniPlayerControls() {
     });
 
     nextBtn.addEventListener("click", () => {
-        let nextIndex = (currentSongIndex + 1) % playlist.length;
-        let nextSong = playlist[nextIndex];
-        if (nextSong) {
-            playSong(nextSong, nextIndex);
-            updateMiniPlayer(nextSong);
-        }
+        playNextSong();
     });
 
     prevBtn.addEventListener("click", () => {
@@ -49,6 +46,16 @@ export function setUpMiniPlayerControls() {
         if (prevSong) {
             playSong(prevSong, prevIndex);
             updateMiniPlayer(prevSong);
+        }
+    });
+
+    shufBtn.addEventListener("click", () => {
+        if (check === 0) {
+            shufBtn.style.color = "#5773FB";
+            check = 1;
+        } else {
+            check = 0;
+            shufBtn.style.color = "#fff";
         }
     });
 
@@ -66,6 +73,7 @@ export function setUpMiniPlayerControls() {
         resetProgessBar();
         const icon = playBtn.querySelector("i");
         icon.className = "ri-play-mini-fill";
+        playNextSong();
     });
 
     progressCon.addEventListener("click", (e) => {
@@ -119,4 +127,23 @@ export function resetProgessBar() {
     const thumbBar = document.querySelector(".thumb");
     progressBar.style.width = `0%`;
     thumbBar.style.left = `0%`;
+}
+
+function playNextSong() {
+    if (check === 1) {
+        let randomIdx = Math.floor(Math.random() * playlist.length);
+        if (randomIdx === currentSongIndex) {
+            randomIdx = (randomIdx + 1) % playlist.length;
+        }
+        const song = playlist[randomIdx];
+        playSong(song, randomIdx);
+        updateMiniPlayer(song);
+    } else {
+        let nextIndex = (currentSongIndex + 1) % playlist.length;
+        let nextSong = playlist[nextIndex];
+        if (nextSong) {
+            playSong(nextSong, nextIndex);
+            updateMiniPlayer(nextSong);
+        }
+    }
 }
