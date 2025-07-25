@@ -80,14 +80,32 @@ export function setUpMiniPlayerControls() {
         resetProgessBar();
         const icon = playBtn.querySelector("i");
         icon.className = "ri-play-mini-fill";
-        if(isRepeat){
-            playSong(playlist[currentSongIndex],currentSongIndex)
-            updateMiniPlayer(playlist[currentSongIndex])
-        }else{
-            playNextSong()
+        if (isRepeat) {
+            playSong(playlist[currentSongIndex], currentSongIndex);
+            updateMiniPlayer(playlist[currentSongIndex]);
+        } else {
+            playNextSong();
         }
     });
 
+    //volume Slider
+    const volumeSlider = document.querySelector(".volume input[type=range]");
+
+    audio.volume = volumeSlider.value;
+    updateVolumeSlider(volumeSlider.value);
+
+    volumeSlider.addEventListener("input", () => {
+        const value = parseFloat(volumeSlider.value);
+        audio.volume = value;
+        updateVolumeSlider(value);
+    });
+
+    function updateVolumeSlider(value) {
+        const volumePercent = value * 100 + "%";
+        volumeSlider.style.setProperty("--progress", volumePercent);
+    }
+     
+    // song progress
     progressCon.addEventListener("click", (e) => {
         const clickX = e.offsetX;
         const barWidth = progressCon.clientWidth;

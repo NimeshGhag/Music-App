@@ -525,12 +525,14 @@ footer .hide {
     gap: 1rem;
   }
   footer .mini-player .track .volume input[type=range] {
+    --progress: 100%;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
     width: 100%;
     height: 1.5px;
-    background: linear-gradient(to right, #5773FB 0%, #5773FB var(--progress, 30%), #FFFFFF var(--progress, 40%), #FFFFFF 100%);
+    background: #fff;
+    background: linear-gradient(to right, #5773FB var(--progress), #FFFFFF var(--progress));
     border-radius: 3px;
     outline: none;
     cursor: pointer;

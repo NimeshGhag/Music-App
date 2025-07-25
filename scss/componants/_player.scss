@@ -157,14 +157,14 @@ footer {
                     gap: 1rem;
 
                     input[type=range] {
+                        --progress: 100%;
                         appearance: none;
                         width: 100%;
                         height: 1.5px;
+                        background: #fff;
                         background: linear-gradient(to right,
-                                $color-hero 0%,
-                                $color-hero var(--progress, 30%),
-                                $color-white var(--progress, 40%),
-                                $color-white 100%);
+                                $color-hero var(--progress),
+                                $color-white var(--progress));
                         border-radius: 3px;
                         outline: none;
                         cursor: pointer;
