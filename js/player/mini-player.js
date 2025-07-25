@@ -15,6 +15,7 @@ export function updateMiniPlayer(song) {
 }
 
 export function setUpMiniPlayerControls() {
+    const body = document.body;
     const playBtn = document.getElementById("mini-play-button");
     const nextBtn = document.querySelector("#next-button");
     const prevBtn = document.querySelector("#prev-button");
@@ -23,6 +24,8 @@ export function setUpMiniPlayerControls() {
     const progressCon = document.querySelector(".progress-bar");
     const progressBar = document.querySelector(".progress");
     const thumbBar = document.querySelector(".thumb");
+    const fullScreenIcon = document.getElementById("full-screen");
+    const miniPlayer = document.querySelector(".mini-player");
 
     playBtn.addEventListener("click", () => {
         const icon = playBtn.querySelector("i");
@@ -104,7 +107,25 @@ export function setUpMiniPlayerControls() {
         const volumePercent = value * 100 + "%";
         volumeSlider.style.setProperty("--progress", volumePercent);
     }
-     
+
+    //full screen
+    function fullScreen() {
+        body.classList.add("fade-out");
+        setTimeout(() => {
+            window.location.href = "/html/player.html";
+        }, 400);
+    }
+
+    if (window.innerWidth < 1000) {
+        miniPlayer.addEventListener("click", () => {
+            fullScreen();
+        });
+    }else{
+        fullScreenIcon.addEventListener("click", () => {
+            fullScreen();
+        });
+    }
+
     // song progress
     progressCon.addEventListener("click", (e) => {
         const clickX = e.offsetX;

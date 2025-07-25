@@ -91,6 +91,8 @@ footer {
 @media (width <=$breakpoint-desktop) {
     footer {
         .mini-player {
+            cursor: pointer;
+
             .track {
 
                 .track-action {

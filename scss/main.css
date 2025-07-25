@@ -326,6 +326,11 @@ body {
           user-select: none;
 }
 
+.fade-out {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
 @media (min-width: 768px) {
   main {
     padding: 1.5rem !important;
@@ -485,6 +490,9 @@ footer .hide {
 }
 
 @media (width <= 1024px) {
+  footer .mini-player {
+    cursor: pointer;
+  }
   footer .mini-player .track .track-action button:nth-child(3), footer .mini-player .track .track-action button:nth-child(4), footer .mini-player .track .track-action button:nth-child(6), footer .mini-player .track .track-action button:nth-child(7) {
     display: none;
   }
