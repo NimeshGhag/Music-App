@@ -111,6 +111,8 @@ export function setUpMiniPlayerControls() {
     //full screen
     function fullScreen() {
         body.classList.add("fade-out");
+        const fullIcon = fullScreenIcon.querySelector('i')
+        fullIcon.className = "ri-fullscreen-exit-line"
         setTimeout(() => {
             window.location.href = "/html/player.html";
         }, 400);
