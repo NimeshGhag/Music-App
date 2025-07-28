@@ -17,7 +17,7 @@
     <!-- <div id="main"> -->
     <aside class="sidebar rounded-br-xl rounded-tr-xl">
         <div class="sidebar-content">
-            <div class="logo">
+            <div data-tab="home-tab" class="logo">
                 <i class="ri-pulse-ai-line"></i>
                 <h3>Groovy</h3>
             </div>
@@ -41,7 +41,7 @@
             </div>
             <ul>
                 <li><i class="ri-flashlight-line"></i>what's new</li>
-                <li><i class="ri-heart-2-line"></i>favourites</li>
+                <li data-tab="libiry-tab"><i class="ri-heart-2-line"></i>favourites</li>
                 <li><i class="ri-radio-line"></i>radio</li>
                 <li><i class="ri-timer-2-line"></i>recent</li>
                 <li><i class="ri-settings-5-line"></i>settings and privacy</li>
@@ -231,11 +231,11 @@
             </div>
 
 
-            <nav class="">
+            <nav class="footer-nav">
                 <ul>
-                    <li><i class="ri-home-5-line"></i>Home</li>
+                    <li data-tab="home-tab"><i class="ri-home-5-line"></i>Home</li>
                     <li><i class="ri-search-2-line"></i>Search</li>
-                    <li><i class="ri-book-shelf-line"></i>Your Library</li>
+                    <li data-tab="libiry-tab"><i class="ri-book-shelf-line"></i>Your Library</li>
                     <li><i class="ri-pulse-ai-line"></i>Prime</li>
                     <li><i class="ri-add-large-fill"></i>Create</li>
                 </ul>
@@ -246,7 +246,7 @@
 
 
     <script type="module" src="../js/pages/home.js"></script>
-
+    <script type="module" src="../js/Layout/aside.js"></script>
 </body>
 
 </html>

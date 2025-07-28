@@ -2,7 +2,10 @@ import { playlist } from "../services/songServices.js";
 import{playMusic}from"../player/audio.js"
 
 let songsList = document.querySelector(".song-list");
-
+const backBtn = document.querySelector('.back-btn');
+backBtn.addEventListener('click',()=>{
+   history.back() 
+})
 function renderSongs() {
     let browseSongs = "";
 

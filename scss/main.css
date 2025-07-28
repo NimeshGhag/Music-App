@@ -814,6 +814,7 @@ body .player-controls .more-controls .share {
 }
 .sidebar .sidebar-content .logo {
   display: none;
+  cursor: pointer;
 }
 .sidebar .sidebar-content .profile-content {
   display: flex;
